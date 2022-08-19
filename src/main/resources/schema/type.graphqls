@@ -1,0 +1,73 @@
+type UserDetails {
+    userid : Int
+    firstname : String
+    lastname : String
+    aadhaar : String
+    email : String
+    phno : String
+    age : Int
+    gender : String
+    nationality : String
+    address : String
+}
+
+type TrainDetails {
+    train_no : Int
+    train_name : String
+    source : String
+    destination : String
+    days : String
+}
+
+type TicketOutput {
+    ticket_no : Int
+    adult_count : Int
+    child_count : Int
+    source : String
+    destination : String
+    fare : Int
+    dept_date : String
+    dept_time : String
+}
+
+type Ticket {
+    user_id : Int
+    ticket_no : Int
+    train_no : Int
+    source : String
+    destination : String
+    passengers : [PassengersOutput]
+    adult_count : Int
+    child_count : Int
+    fare : Int
+    arrival_date : String
+    arrival_time : String
+    dept_date : String
+    dept_time :String
+}
+
+type PassengersOutput {
+    passenger_name : String
+    aadhaar : String
+    age : Int
+    gender : String
+    reservation : String
+    coach : String
+    berth : String
+    seat : Int
+}
+
+type Schedule{
+    SN : Int
+    trainno : Int
+    stationcode : String
+    A : Int
+    AA : Int
+    AAA : Int
+    SL : Int
+    Station_Name : String
+    Route : String
+    Arrival_time : String
+    Departure_Time : String
+    Distance : Int
+}

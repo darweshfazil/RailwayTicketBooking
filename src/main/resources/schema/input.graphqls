@@ -1,0 +1,80 @@
+#User Input
+input UserDetailsInput {
+    firstname : String!
+    lastname : String!
+    aadhaar : String!
+    email : String!
+    phno : String!
+    age : Int!
+    gender : String!
+    nationality : String!
+    address : String!
+    username : String!
+    password : String!
+}
+
+input UpdateUserDetails {
+    userid : Int!
+    firstname : String
+    lastname : String
+    address : String
+}
+
+#Train Details Input
+input TrainDetailsInput {
+    train_no : Int!
+    train_name : String!
+    source : String!
+    destination : String!
+    days : String!
+}
+
+#Ticket Details Input
+input TicketInput {
+    user_id : Int!
+    train_no : Int!
+    passengers : [PassengersInput]!
+    adult_count : Int
+    child_count : Int
+    source : String
+    destination : String
+    dept_date : String!
+    dept_time : String!
+    preferredCoach : String!
+}
+
+input PassengersInput {
+    passenger_name : String!
+    aadhaar : String!
+    age : Int!
+    gender : String!
+    reservation : String
+}
+
+# Passenger Details Input
+input PassengerDetailsInput{
+    passenger_name : String
+    aadhaar : String
+    age : Int!
+    gender : String!
+    reservation : String
+    berth : String
+    coach : String
+    seat : Int
+}
+
+# Input for Train Schedule
+input ScheduleInput {
+    SN : Int
+    trainno : Int
+    stationcode : String
+    A : Int
+    AA : Int
+    AAA : Int
+    SL : Int
+    Station_Name : String
+    Route : String
+    Arrival_time : String
+    Departure_Time : String
+    Distance : Int
+}

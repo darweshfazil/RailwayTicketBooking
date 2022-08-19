@@ -1,0 +1,23 @@
+type Query {
+
+#    GraphQL Query for User Details
+    getAllUsers : [UserDetails]
+    getUserById(userId : Int!) : UserDetails
+
+#    GraphQL Query for Train Details
+    getAllTrains : [TrainDetails]
+    getTrainById(trainNo : Int!) : TrainDetails
+
+#    GraphQL Query for Ticket
+    getAllTickets : [Ticket]
+    getTicketById(ticketNo : Int!) : TicketOutput
+
+#    GraphQL Query for Passenger Details
+    getAllPassengers : [PassengersOutput]
+    getPassengerById(ticketNo : Int!, passengerName : String!) : PassengersOutput
+
+#    GraphQL Query for Train Schedule
+    getAllSchedule : [Schedule]
+    getScheduleById(trainNo : Int!) : [Schedule]
+    getScheduleByIdAndStationCode(trainNo : Int!, stationCode : String!) : Schedule
+}

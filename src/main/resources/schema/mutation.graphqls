@@ -1,0 +1,25 @@
+type Mutation {
+
+#    GraphQL Mutation for Passenger Details
+    addUserDetails(userDetails : UserDetailsInput!) : UserDetails
+    updateUserDetails(userDetails : UpdateUserDetails!) : UserDetails
+    deleteUserDetails(userId : Int!) : String
+
+#    GraphQL Mutation for Train Details
+    addTrainDetails(trainDetails : TrainDetailsInput!) : TrainDetails
+    updateTrainDetails(trainDetails : TrainDetailsInput!) : TrainDetails
+    deleteTrainDetails(trainNo : Int!) : String
+
+#    GraphQL Mutation for Ticket
+    addTicket(ticket : TicketInput!) : Ticket
+    deleteTicket(ticketNo : Int!) : String
+
+#    GraphQL Mutation for Passenger Details
+    deletePassengerDetails(ticketNo : Int!, passengerName : String!) : String
+
+#    GraphQL Mutation for Train Schedule Details
+    addSchedule(trainSchedule : ScheduleInput!) : Schedule
+    updateSchedule(trainSchedule : ScheduleInput!) : Schedule
+    deleteTrainSchedule(trainNo : Int!) : String
+    deleteSchedule(trainNo : Int!, stationCode : String!) : String
+}
